@@ -1,0 +1,735 @@
+# CONNECTRAG — PREMIUM AI RESEARCH & CONNECTIVITY-AWARE RAG DASHBOARD
+
+## 1. PROJECT OVERVIEW
+
+Design a visually exceptional, high-fidelity, multi-page web application for **ConnectRAG**, a connectivity-aware Retrieval-Augmented Generation (RAG) platform designed to maintain access to knowledge when internet connectivity becomes weak, unstable, or unavailable.
+
+ConnectRAG intelligently demonstrates a three-tier retrieval architecture:
+
+- Tier 1: Cloud RAG — hosted retrieval and LLM inference when network quality is good.
+- Tier 2: Local RAG — locally available retrieval and local LLM inference when connectivity deteriorates.
+- Tier 3: Cached Knowledge — instant access to previously stored answers when connectivity is severely degraded or unavailable.
+
+The system uses a Network Quality Score (NQS) and connectivity signals to determine the appropriate retrieval strategy.
+
+This web application has two major purposes:
+
+**A. Data Lab:** Visualize the real dataset preparation and training statistics generated during development.
+
+**B. Live Demo:** Demonstrate the intended behavior of ConnectRAG through a polished, interactive connectivity simulation. This section is a frontend prototype and must not imply that the backend orchestrator is already implemented.
+
+The product should feel like a serious AI infrastructure startup combined with a sophisticated research laboratory dashboard. It should be suitable for research presentations, mentor reviews, technical demonstrations, and eventual production development.
+
+## 2. DESIGN PHILOSOPHY
+
+Create a distinctive, premium interface inspired by modern AI infrastructure consoles, observability platforms, developer tools, and scientific analytics applications.
+
+The interface should feel:
+- Technically sophisticated.
+- Visually striking but restrained.
+- Research-oriented and data-driven.
+- Responsive, fast, and intuitive.
+- Designed by a world-class product design team.
+- Realistic enough to resemble a functioning software product.
+
+Avoid generic SaaS templates, oversized rounded cards everywhere, excessive gradients, cartoon illustrations, random decorative charts, and cluttered gaming-style neon effects.
+
+Use visual hierarchy, meaningful whitespace, subtle borders, clean data visualization, and precise alignment.
+
+## 3. BRAND IDENTITY AND LOGO
+
+Create an original logo and cohesive brand system for ConnectRAG.
+
+Brand name: ConnectRAG
+
+Suggested tagline: "Knowledge That Survives Disconnection."
+
+Alternative short product descriptor: "Connectivity-Aware Intelligence."
+
+### Logo concept
+
+Design a distinctive geometric symbol combining:
+- Three interconnected network nodes representing Cloud, Local, and Cached tiers.
+- A central retrieval point or abstract letter C.
+- A subtle forward-moving pathway that represents intelligent knowledge routing.
+- A small geometric reference to retrieval, such as a connected document node or an abstract R.
+
+The logo should communicate resilient connectivity, intelligent routing, retrieval, and knowledge continuity.
+
+Keep the symbol simple, geometric, symmetrical enough to remain recognizable, and easy to reproduce in SVG.
+
+Do not use a generic brain icon, stock cloud icon, ordinary Wi-Fi symbol, or a complicated illustration.
+
+Create:
+1. Primary horizontal logo: symbol + ConnectRAG wordmark.
+2. Compact symbol-only version for the sidebar and favicon.
+3. Monochrome white version for dark backgrounds.
+4. Cyan/teal accent version for the application.
+5. Optional light-background version for documents and presentations.
+
+Use a contemporary geometric sans-serif wordmark. Give "Connect" and "RAG" a subtle visual distinction without making the brand look fragmented.
+
+Logo palette:
+- Electric cyan: #42D9F5
+- Teal: #2DD4BF
+- Midnight background: #080D18
+- White: #F3F7FC
+
+Render the logo in the application's sidebar and top-level brand areas. Use the same identity consistently across all screens.
+
+## 4. VISUAL DESIGN SYSTEM
+
+### Color palette
+
+Use a predominantly dark interface.
+
+- Main background: #080D18
+- Secondary background: #0D1422
+- Card background: #111B2C
+- Elevated panel: #162236
+- Border: #24334A
+- Primary text: #F3F7FC
+- Secondary text: #98A8BD
+- Muted text: #65758B
+- Primary accent: #42D9F5
+- Secondary accent: #2DD4BF
+- Success: #34D399
+- Warning: #FBBF24
+- Error: #FB7185
+- Violet accent: #A78BFA
+
+Use cyan for active selections, key metrics, data highlights, and interactive elements. Use teal or green for healthy status. Use amber for degraded connectivity and rose for critical or offline states.
+
+Do not use every accent color simultaneously. Each color must communicate meaning.
+
+### Typography
+
+Use Inter, Geist, or a similarly clean contemporary sans-serif.
+
+Use:
+- Large, confident headings.
+- Medium-weight section headings.
+- Tabular numerals for metrics.
+- Monospaced typography for latency, network telemetry, timestamps, IDs, and technical labels.
+
+Maintain excellent readability at dashboard scale.
+
+### Layout
+
+- Desktop-first application optimized for 1440px-wide displays.
+- Fixed-width or collapsible left sidebar, approximately 250px.
+- Compact top navigation bar.
+- Main content area with a consistent 12-column grid.
+- Cards with 10–14px corner radii.
+- Thin, low-contrast borders.
+- Subtle shadows and restrained accent glows.
+- Consistent spacing and alignment.
+- Responsive tablet and mobile layouts.
+
+Use a subtle grid or network-line background only in selected areas. The dashboard itself should remain clean and readable.
+
+## 5. GLOBAL APPLICATION STRUCTURE
+
+Build one unified application with persistent navigation.
+
+### Left sidebar
+
+Display the ConnectRAG logo at the top.
+
+Organize the navigation into the following groups:
+
+OVERVIEW
+- Command Center
+- Live Demo
+
+RESEARCH
+- Data Lab
+- Dataset Explorer
+- Training Analytics
+
+SYSTEM
+- Architecture
+- About ConnectRAG
+
+At the bottom of the sidebar, include:
+- Prototype status indicator.
+- Current environment label: Research Preview.
+- A compact profile/avatar placeholder.
+
+Use simple, consistent line icons. The selected navigation item should have a subtle cyan background, a bright left indicator, and high-contrast text.
+
+All navigation items must lead to their corresponding screens or meaningful in-page states.
+
+### Top bar
+
+Include:
+- Breadcrumb navigation.
+- Current page title or contextual subtitle.
+- Global search or command-search affordance.
+- Dataset/configuration selector where appropriate.
+- A compact system-status indicator.
+- A responsive sidebar toggle.
+
+Clearly distinguish the application-wide prototype status from simulated system connectivity.
+
+## 6. SCREEN ONE — COMMAND CENTER
+
+Create a sophisticated landing dashboard that introduces the platform and provides an overview of its research pipeline.
+
+Page heading: "ConnectRAG Command Center"
+
+Subtitle: "Resilient retrieval intelligence across changing network conditions."
+
+At the top, create a premium introductory section containing:
+- ConnectRAG brand mark.
+- A concise description of connectivity-aware retrieval.
+- A primary CTA: "Launch Live Demo".
+- A secondary CTA: "Explore Data Lab".
+
+Below it, create four KPI cards:
+1. Total Corpus Chunks.
+2. Training Pairs.
+3. Datasets Processed.
+4. Retrieval Modes.
+
+Populate the cards using available statistics when connected to the data files. If no real values are available in the design prototype, use clearly labeled illustrative values and make them easy to replace.
+
+Do not invent claims of real-time model performance.
+
+Include a central visual panel showing the three-tier architecture:
+
+CLOUD RAG → LOCAL RAG → CACHED KNOWLEDGE
+
+Represent the three tiers as interconnected nodes with directional pathways. Use a distinct visual treatment for each tier. Show that deteriorating connectivity can trigger a transition toward local and cached retrieval.
+
+Below the architecture, include:
+- Dataset preparation summary.
+- Recent pipeline activity.
+- A compact chart summarizing training data composition.
+- A card linking to detailed Data Lab analytics.
+- A card linking to the Live Demo.
+
+Use small, meaningful charts and concise annotations. This page should be an orientation screen, not a duplicate of every other dashboard.
+
+## 7. SCREEN TWO — DATA LAB
+
+This is a major priority.
+
+Page title: "Data Lab"
+
+Subtitle: "Inspect the datasets, corpus preparation, and training data behind ConnectRAG."
+
+Design this as a research-grade analytics dashboard with precise charts, comparison controls, clear data provenance, and readable labels.
+
+### Header controls
+
+Include:
+- Dataset selector.
+- Data preparation stage selector.
+- Search or filter control.
+- Export report button.
+- Dataset refresh or reload affordance.
+
+Use a clear source-status label:
+- "Loaded from statistics files" when connected to real files.
+- "Illustrative data" when displaying mock values.
+
+Do not fabricate successful file loading or export operations.
+
+### Section A — MedQuAD source composition
+
+Create a large comparison panel titled:
+
+"MedQuAD Source Mix"
+
+Subtitle: "Source distribution before and after the GHR/GARD cap."
+
+Display a before-versus-after comparison of the source distribution.
+
+Use grouped horizontal bars or a carefully designed paired-bar chart. Show:
+- Source/category name.
+- Original record count.
+- Post-cap record count.
+- Percentage of the dataset.
+- Change in count or proportion.
+
+Make it easy to identify how applying the GHR/GARD cap affects the composition of the dataset.
+
+Include a toggle:
+- Record Counts.
+- Percentage Share.
+
+Include a compact summary of the cap's impact, calculated from actual loaded statistics.
+
+Do not assume specific source names, record counts, or cap thresholds if they are not present in the source files. Use the actual categories and values from the data.
+
+### Section B — MedMCQA subject distribution
+
+Panel title: "MedMCQA Subject Distribution"
+
+Create a professional horizontal bar chart ranked by question count.
+
+Requirements:
+- Display subject names and counts.
+- Sort subjects by count in descending order.
+- Provide a top-subjects view and a complete distribution view.
+- Include a search/filter control.
+- Include a toggle for counts versus percentages.
+- Make long subject labels readable.
+- Show the total question count if the source file provides it.
+
+Use a chart layout appropriate for a potentially large number of subjects. Avoid an overcrowded pie chart.
+
+### Section C — Corpus chunks per PDF
+
+Panel title: "Corpus Ingestion Map"
+
+Subtitle: "How source documents contribute to the retrieval corpus."
+
+Show the number of generated chunks for each PDF document.
+
+Include:
+- PDF filename.
+- Number of chunks.
+- Relative contribution to the total corpus.
+- Document-level ranking.
+- Total number of PDFs.
+- Total chunks.
+- Average chunks per PDF, calculated from the actual data.
+
+Use a horizontal bar chart for the main view, with a compact document table beneath or beside it.
+
+Make long filenames readable through wrapping, truncation with tooltips, or an expandable detail panel.
+
+Include sorting by filename, chunk count, and corpus contribution.
+
+### Section D — Training pairs per dataset
+
+Panel title: "Training Data Composition"
+
+Show the number of training pairs for every dataset used in the pipeline.
+
+Include:
+- Dataset name.
+- Training-pair count.
+- Validation-pair count when available.
+- Test-pair count when available.
+- Total pair count.
+- Dataset share as a percentage of all pairs.
+
+Use grouped bars or a stacked bar chart if the source statistics support it.
+
+Clearly distinguish training, validation, and test pairs. Do not treat these as interchangeable.
+
+The visualization must accommodate datasets such as MedQuAD, MedMCQA, and any additional datasets present in the statistics files.
+
+Do not assume every dataset has all three splits.
+
+### Section E — Research data quality summary
+
+Include a compact summary panel with:
+- Dataset coverage.
+- Source balancing or capping status.
+- Corpus generation status.
+- Training-pair generation status.
+- Missing or unavailable statistics.
+
+Only show statuses supported by the loaded data. Unknown states should be displayed as "Not available" rather than assumed complete.
+
+### Data Lab interaction requirements
+
+- Charts must be driven by structured data rather than static decorative shapes.
+- Filters should update the visible charts.
+- Comparison controls should update chart presentation.
+- Metric totals should be calculated from the underlying data.
+- Tooltips should show exact values and percentages.
+- Tables should support sorting where practical.
+- Provide empty, loading, and error states.
+- Include clear labels for the source and last refresh time when known.
+- Keep a consistent visual language across every chart.
+
+Prioritize clarity, analytical usefulness, and presentation readiness.
+
+## 8. SCREEN THREE — LIVE CONNECTRAG DEMO
+
+This is the signature screen of the application.
+
+Page title: "Live ConnectRAG"
+
+Subtitle: "Explore how retrieval adapts as network quality changes."
+
+This screen must look like a real-time system observability console, but it is currently a frontend simulation. All network metrics, routing transitions, latency values, and retrieved results must be presented as simulated unless connected to a real backend.
+
+Add a persistent label:
+
+"INTERACTIVE SIMULATION · BACKEND NOT CONNECTED"
+
+Do not falsely display live telemetry, real inference results, or actual orchestration events.
+
+### A. Network Quality Score
+
+Create a prominent NQS visualization at the top of the screen.
+
+Display:
+- A large numerical Network Quality Score from 0 to 100.
+- A circular gauge or segmented arc.
+- A descriptive connectivity state.
+- A small network-health trend chart.
+- Simulated latency.
+- Simulated bandwidth.
+- Simulated packet loss.
+- Simulated jitter.
+
+Use illustrative threshold ranges that can be configured later. Clearly label these as demo thresholds, not validated production routing policies.
+
+Suggested visual states:
+- High NQS: healthy, cyan/teal.
+- Medium NQS: degraded, amber.
+- Low NQS: critical, rose.
+- No connectivity: offline, muted gray with a clear disconnected indicator.
+
+The score and all network indicators must update when the user changes the connectivity simulation controls.
+
+### B. Connectivity simulator
+
+Create an interactive, visually prominent panel titled:
+
+"Network Conditions"
+
+Include a slider labeled "Simulated Network Quality" with a range from 0 to 100.
+
+Also provide scenario presets:
+- Excellent Connection.
+- Unstable Network.
+- Weak Connection.
+- Intermittent Connectivity.
+- Fully Offline.
+
+Changing the slider or preset must update the simulated network state.
+
+Update:
+- NQS gauge.
+- Latency, bandwidth, packet loss, and jitter.
+- Active retrieval tier.
+- Tier status indicators.
+- Illustrative latency for the retrieval operation.
+- Retrieval event log.
+- Network health visualization.
+
+Add an optional control to simulate a brief connection interruption and recovery using explicit user interaction, if supported by the prototype implementation.
+
+The entire demo must feel interactive rather than merely showing a slider that changes a number.
+
+### C. Active retrieval tier
+
+Create three connected tier cards or nodes:
+
+TIER 1 — CLOUD RAG
+- Hosted retrieval.
+- Cloud-based LLM inference.
+- Best suited to healthy connectivity.
+- Simulated availability and latency.
+
+TIER 2 — LOCAL RAG
+- Local vector index.
+- Local retrieval and local LLM.
+- Designed to remain usable under degraded connectivity.
+- Simulated local inference status.
+
+TIER 3 — CACHED KNOWLEDGE
+- Previously stored answers.
+- Minimal network dependence.
+- Designed for severe disruption or offline use.
+- Simulated cache-hit status.
+
+Highlight the currently selected tier using a bright outline, a subtle glow, and a clear ACTIVE indicator.
+
+Display other tiers as available, standby, or unavailable according to the simulated scenario.
+
+Animate the pathway between tiers when the selected tier changes.
+
+Do not claim that real model inference, vector retrieval, or routing is taking place in the frontend prototype.
+
+### D. Retrieval query workbench
+
+Create a functional-looking query interface with the heading:
+
+"Ask the Knowledge Engine"
+
+Include:
+- A multi-line question input.
+- A submit/query button.
+- A small set of suggested example questions.
+- A selected-tier indicator.
+- A simulated response panel.
+- A simulated end-to-end latency display.
+
+Use medical or public-health knowledge examples appropriate to the project's research context. Responses must be clearly labeled as illustrative demonstration content, not validated medical advice.
+
+Submitting a question should produce a coherent mock interaction:
+1. Show a simulated query-submission state.
+2. Display the currently selected tier.
+3. Show an illustrative retrieval response.
+4. Display associated retrieved-source cards.
+5. Update the simulated query event log.
+
+Use a few varied, locally defined example questions and deterministic mock responses where possible. Do not claim the answers were retrieved from a live corpus.
+
+### E. Retrieved sources
+
+Create a source-inspection panel titled:
+
+"Retrieved Context"
+
+Each source card should include:
+- Document or dataset name.
+- Source type.
+- Simulated relevance score.
+- Relevant excerpt.
+- Document identifier or page number when available in the mock data.
+- A visual indicator that identifies it as illustrative source metadata.
+
+Use a compact, professional document-card design.
+
+Make each card expandable to reveal more context.
+
+If no source is available, show a clear empty state rather than fabricating a successful retrieval.
+
+### F. Retrieval observability
+
+Add a technical monitoring section with:
+- Recent query events.
+- Selected tier per query.
+- Simulated retrieval latency.
+- Simulated cache-hit or cache-miss state.
+- Simulated tier-transition history.
+- A small latency-over-time chart.
+- A clear event timestamp or elapsed-time indicator.
+
+Use a compact event table or timeline. It should feel like a serious engineering tool.
+
+Clearly label the data as simulated.
+
+### G. Connectivity recovery
+
+Include a visual explanation of how the system is intended to return from degraded connectivity to cloud access.
+
+Show the conceptual flow:
+- Network degradation detected.
+- Retrieval shifts toward local or cached knowledge.
+- Connectivity recovers.
+- Cloud availability returns.
+- Synchronization can resume.
+
+Present this as an architectural behavior preview, not as an implemented synchronization service.
+
+## 9. SCREEN FOUR — DATASET EXPLORER
+
+Create a dedicated dataset inspection page.
+
+Include a table with:
+- Dataset name.
+- Dataset type.
+- Record or pair count.
+- Processing stage.
+- Available statistics.
+- Data source.
+- Last updated timestamp, when known.
+
+Support searching, filtering, and sorting.
+
+Selecting a dataset should open a detail panel with relevant distribution charts and metadata.
+
+Do not invent dataset download URLs or imply that raw datasets can be downloaded unless the functionality exists.
+
+## 10. SCREEN FIVE — TRAINING ANALYTICS
+
+Create a focused research dashboard for the training pipeline.
+
+Include:
+- Pair counts by dataset.
+- Training, validation, and test distributions.
+- Dataset composition.
+- A conceptual offline training pipeline.
+- Model artifact and index status when known.
+
+Show the pipeline as a clean sequence:
+
+Dataset Preparation
+→ Pair Generation
+→ Siamese Bi-Encoder Fine-Tuning
+→ Embedding Generation
+→ FAISS Index Construction
+→ Model and Index Artifacts Saved
+
+Represent these as stages with clear labels and status states.
+
+Use "Completed", "In Progress", "Pending", and "Unknown" only when supported by project status data. Otherwise use a clearly labeled illustrative pipeline.
+
+Do not invent model accuracy, recall, precision, MRR, nDCG, or retrieval latency results.
+
+Include a reserved comparison panel for future base-versus-fine-tuned retrieval evaluation. Display "Awaiting evaluation results" until actual benchmark metrics are supplied.
+
+## 11. SCREEN SIX — ARCHITECTURE
+
+Create a clean technical architecture visualization.
+
+Show the following logical components:
+
+1. Connectivity Monitor
+2. Network Quality Score
+3. Retrieval Orchestrator
+4. Cloud RAG
+5. Local RAG
+6. Cached Knowledge
+7. Retrieval Results
+8. Knowledge Synchronization
+
+Illustrate the logical relationships with arrows and clearly named pathways.
+
+Represent the intended behavior:
+
+Network Signals
+→ NQS Calculation
+→ Orchestration Decision
+→ Appropriate Retrieval Tier
+→ Retrieved Context
+→ Response
+
+Show cloud, local, and cached components as distinct architectural zones.
+
+Use dotted or dashed outlines for components that are planned or not implemented. Use solid styling only for components whose implementation status is verified.
+
+Include a compact architecture legend and a short description of each component.
+
+Do not present a conceptual diagram as proof that all components already exist.
+
+## 12. FUNCTIONAL INTERACTION REQUIREMENTS
+
+Create realistic, clickable interactions wherever appropriate.
+
+The following should work in the frontend prototype:
+
+- Sidebar navigation between all screens.
+- Active navigation highlighting.
+- Connectivity slider and preset scenarios.
+- NQS gauge updates.
+- Automatic simulated tier selection.
+- Tier-transition animations.
+- Query submission and illustrative response display.
+- Retrieved-source expansion.
+- Dataset search and filtering.
+- Chart view toggles.
+- Sorting and filtering of data tables.
+- Dataset detail panels.
+- Responsive sidebar.
+- Tooltips for metrics and charts.
+- Clear loading, empty, error, and offline states.
+- Reset-demo control to restore the default simulation.
+
+Use a deterministic simulation model rather than random values changing on every render.
+
+For the simulated tier-selection behavior, implement configurable thresholds and make them easy to modify. Use the thresholds as demo logic, not as claims about the final orchestration algorithm.
+
+Preserve the distinction between:
+1. Real statistics loaded from source files.
+2. Illustrative sample data.
+3. Simulated connectivity and routing behavior.
+4. Planned backend functionality.
+
+The UI must never falsely report a real backend connection or real retrieval execution.
+
+## 13. DATA INTEGRATION READINESS
+
+Structure the design so that the frontend can later connect to actual statistics files and a real backend.
+
+Use reusable components and separate data models for:
+- Dataset summaries.
+- MedQuAD source distribution.
+- MedMCQA subject distribution.
+- PDF chunk statistics.
+- Training-pair counts.
+- Network telemetry.
+- Retrieval-tier state.
+- Query results and retrieved sources.
+- Model and index status.
+
+When real statistics files are supplied, populate charts from their actual values. Do not hardcode mock statistics into chart components.
+
+If the statistics are not available at design time, use clearly marked sample data with easy-to-replace data objects.
+
+The UI must remain coherent when some metrics or datasets are unavailable.
+
+## 14. MOTION AND MICRO-INTERACTIONS
+
+Use subtle, purposeful motion:
+- Smooth transitions when the active tier changes.
+- A restrained animated pulse on the active network node.
+- Short count-up animations for key metrics on initial load.
+- Gentle chart transitions when filters change.
+- Smooth expansion of source cards.
+- Small status transitions when the network scenario changes.
+
+Respect reduced-motion preferences where supported.
+
+Avoid continuous flashing, excessive particles, aggressive glow, or animations that make the data harder to read.
+
+## 15. RESPONSIVE BEHAVIOR
+
+Desktop:
+- Full navigation sidebar.
+- Multi-column analytics grids.
+- Wide charts and detailed source tables.
+
+Tablet:
+- Collapsible sidebar.
+- Reduced grid columns.
+- Horizontally scrollable tables when needed.
+
+Mobile:
+- Compact navigation.
+- Single-column metric cards.
+- Responsive charts.
+- Readable network controls.
+- Stacked tier cards.
+- Query and source panels that fit the viewport.
+
+Never allow important labels or values to become unreadable on smaller screens.
+
+## 16. ACCESSIBILITY AND POLISH
+
+Use:
+- Strong text contrast.
+- Clear keyboard-focus indicators.
+- Accessible control labels.
+- Semantic headings.
+- Consistent iconography.
+- Color plus text labels for status communication.
+- Readable chart legends.
+- Properly labeled sliders and buttons.
+
+Keep the design visually impressive without sacrificing usability.
+
+## 17. FINAL DELIVERABLE
+
+Generate a cohesive, high-fidelity, multi-screen ConnectRAG web application, not just a landing page.
+
+Prioritize these screens in this order:
+1. Data Lab.
+2. Live ConnectRAG Demo.
+3. Command Center.
+4. Dataset Explorer.
+5. Training Analytics.
+6. Architecture.
+
+Ensure the Data Lab clearly presents MedQuAD source mix before and after the GHR/GARD cap, MedMCQA subject distribution, corpus chunks per PDF, and training-pair counts per dataset.
+
+Ensure the Live Demo contains a working connectivity slider, changing NQS, simulated network telemetry, automatic tier selection, query simulation, retrieved-source cards, and an event timeline.
+
+Create the original ConnectRAG logo and use it consistently throughout the interface.
+
+Maintain one design system across all pages.
+
+The final result should look like a polished AI infrastructure product that could be presented confidently in a technical research review. It should communicate one central idea:
+
+**ConnectRAG keeps knowledge accessible by adapting retrieval to the network, rather than assuming the network will always be available.**
